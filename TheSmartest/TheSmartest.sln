@@ -1,6 +1,10 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheSmartest", "TheSmartest\TheSmartest.csproj", "{F7F80CA8-A841-42FE-B785-D224E6190C43}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheSmartest.Client", "TheSmartest.Client\TheSmartest.Client.csproj", "{F7F80CA8-A841-42FE-B785-D224E6190C43}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheSmartest.ProtoContract", "TheSmartest.ProtoContract\TheSmartest.ProtoContract.csproj", "{2E86427B-1917-4034-987C-07533CB02A4E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheSmartest.Server", "TheSmartest.Server\TheSmartest.Server.csproj", "{BE811F98-1017-42CD-9064-15CC90C10FE5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -12,5 +16,13 @@ Global
 		{F7F80CA8-A841-42FE-B785-D224E6190C43}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F7F80CA8-A841-42FE-B785-D224E6190C43}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F7F80CA8-A841-42FE-B785-D224E6190C43}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E86427B-1917-4034-987C-07533CB02A4E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E86427B-1917-4034-987C-07533CB02A4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E86427B-1917-4034-987C-07533CB02A4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E86427B-1917-4034-987C-07533CB02A4E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE811F98-1017-42CD-9064-15CC90C10FE5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE811F98-1017-42CD-9064-15CC90C10FE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE811F98-1017-42CD-9064-15CC90C10FE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE811F98-1017-42CD-9064-15CC90C10FE5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace TheSmartest
+namespace TheSmartest.Server
 {
     class Program
     {
