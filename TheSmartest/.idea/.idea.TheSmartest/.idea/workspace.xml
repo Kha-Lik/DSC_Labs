@@ -9,9 +9,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c4f1f5ff-69b6-4c44-8ba0-ef8094e4b9cd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/TheSmartest.Server/IQuestionsSource.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TheSmartest.Server/Question.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TheSmartest.Server/QuestionService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TheSmartest/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TheSmartest/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TheSmartest.Server/GameServicesImplementation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TheSmartest.Server/GameServicesImplementation.cs" afterDir="false" />
     </list>
@@ -108,7 +105,8 @@
       <workItem from="1633807392290" duration="6000" />
       <workItem from="1633807521643" duration="4519000" />
       <workItem from="1633819851321" duration="2616000" />
-      <workItem from="1633871178180" duration="1620000" />
+      <workItem from="1633871178180" duration="2583000" />
+      <workItem from="1633875803383" duration="99000" />
     </task>
     <task id="LOCAL-00001" summary="Defined proto scheme for the service">
       <created>1633818600442</created>
@@ -117,7 +115,14 @@
       <option name="project" value="LOCAL" />
       <updated>1633818600442</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="[gRPC] Initial QuestionService implementation">
+      <created>1633874378591</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1633874378591</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -133,11 +138,11 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="Defined proto scheme for the service" />
-    <option name="LAST_COMMIT_MESSAGE" value="Defined proto scheme for the service" />
+    <MESSAGE value="[gRPC] Initial QuestionService implementation" />
+    <option name="LAST_COMMIT_MESSAGE" value="[gRPC] Initial QuestionService implementation" />
   </component>
 </project>
