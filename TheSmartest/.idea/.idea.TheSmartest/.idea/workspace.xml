@@ -9,15 +9,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c4f1f5ff-69b6-4c44-8ba0-ef8094e4b9cd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/TheSmartest.Client/TheSmartest.Client.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TheSmartest.Server/GameServicesImplementation.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TheSmartest.Server/Program.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TheSmartest.Server/TheSmartest.Server.csproj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TheSmartest.Server/IQuestionsSource.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TheSmartest.Server/Question.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TheSmartest.Server/QuestionService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TheSmartest/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TheSmartest/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TheSmartest.ProtoContract/TheSmartest.ProtoContract.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/TheSmartest.ProtoContract/TheSmartest.ProtoContract.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TheSmartest.ProtoContract/thesmartest.proto" beforeDir="false" afterPath="$PROJECT_DIR$/TheSmartest.ProtoContract/thesmartest.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TheSmartest.sln" beforeDir="false" afterPath="$PROJECT_DIR$/TheSmartest.sln" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TheSmartest/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TheSmartest.Client/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheSmartest.Server/GameServicesImplementation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TheSmartest.Server/GameServicesImplementation.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,6 +108,7 @@
       <workItem from="1633807392290" duration="6000" />
       <workItem from="1633807521643" duration="4519000" />
       <workItem from="1633819851321" duration="2616000" />
+      <workItem from="1633871178180" duration="1620000" />
     </task>
     <task id="LOCAL-00001" summary="Defined proto scheme for the service">
       <created>1633818600442</created>
