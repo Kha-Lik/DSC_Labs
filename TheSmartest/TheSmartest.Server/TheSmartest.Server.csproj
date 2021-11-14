@@ -8,5 +8,13 @@
     <ItemGroup>
       <ProjectReference Include="..\TheSmartest.ProtoContract\TheSmartest.ProtoContract.csproj" />
     </ItemGroup>
+    
+    <ItemGroup>
+        <None Update="questions.json" CopyToOutputDirectory="PreserveNewest" />
+    </ItemGroup>
+    
+    <ItemGroup>
+      <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    </ItemGroup>
 
 </Project>

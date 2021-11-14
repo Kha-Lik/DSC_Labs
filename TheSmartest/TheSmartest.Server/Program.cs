@@ -1,12 +1,28 @@
 ﻿using System;
+using Grpc.Core;
 
 namespace TheSmartest.Server
 {
-    class Program
+    internal static class Program
     {
-        static void Main(string[] args)
+        private const int Port = 56001;
+        public static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var questionSource = new JsonQuestionSource(@".\questions.json");
+            var questionService = new QuestionService(questionSource);
+            
+            var server = new Grpc.Core.Server
+            {
+                Services = { Game.BindService(new GameServicesImplementation(questionService)) },
+                Ports = { new ServerPort("localhost", Port, ServerCredentials.Insecure) }
+            };
+            server.Start();
+
+            Console.WriteLine($"TheSmartest server listening on port {Port}");
+            Console.WriteLine("Press any key to stop the server...");
+            Console.ReadKey();
+
+            server.ShutdownAsync().Wait();
         }
     }
 }

@@ -14,6 +14,10 @@ service Game {
   rpc SendAnswer (AnswerRequest) returns (AnswerResponse) {}
 
   rpc GetWinner (WinnerRequest) returns (WinnerResponse) {}
+  
+  rpc Restart (RestartRequest) returns (RestartResponse) {}
+  
+  rpc UnregisterPlayer (UnregisterRequest) returns (UnregisterResponse) {}
 }
 
 message PlayerRequest {
@@ -98,5 +102,22 @@ message Players{
 message Player {
   string Name = 1;
   int32 Score = 2;
+}
+
+message RestartRequest {
+  int32 PlayerId = 1;
+}
+
+message RestartResponse {
+  bool Success = 1;
+  string ErrorMessage = 2;
+}
+
+message UnregisterRequest {
+  int32 PlayerId = 1;
+}
+
+message UnregisterResponse {
+  bool Result = 1;
 }
   
