@@ -9,14 +9,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c4f1f5ff-69b6-4c44-8ba0-ef8094e4b9cd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.TheSmartest/.idea/discord.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TheSmartest.Server/JsonQuestionSource.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TheSmartest.Server/questions.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TheSmartest.Client/ConsoleView.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TheSmartest.Client/GameService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TheSmartest/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TheSmartest/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TheSmartest.ProtoContract/thesmartest.proto" beforeDir="false" afterPath="$PROJECT_DIR$/TheSmartest.ProtoContract/thesmartest.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TheSmartest.Server/GameServicesImplementation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TheSmartest.Server/GameServicesImplementation.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TheSmartest.Server/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TheSmartest.Server/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TheSmartest.Server/TheSmartest.Server.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/TheSmartest.Server/TheSmartest.Server.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheSmartest.Client/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TheSmartest.Client/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheSmartest.Client/TheSmartest.Client.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/TheSmartest.Client/TheSmartest.Client.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +51,9 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="1zHaGmvDBXNtcueGSf4tJAqrOKJ" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="autoscrollFromSource" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -73,7 +72,7 @@
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
-  <component name="RunManager" selected=".NET Project.TheSmartest.Server">
+  <component name="RunManager" selected=".NET Project.TheSmartest">
     <configuration name="TheSmartest" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
       <option name="PROGRAM_PARAMETERS" value="" />
@@ -127,7 +126,7 @@
       <workItem from="1633875963614" duration="2866000" />
       <workItem from="1634757135523" duration="3888000" />
       <workItem from="1635977841878" duration="152000" />
-      <workItem from="1636909613612" duration="6461000" />
+      <workItem from="1636909613612" duration="21184000" />
     </task>
     <task id="LOCAL-00001" summary="Defined proto scheme for the service">
       <created>1633818600442</created>
@@ -157,7 +156,21 @@
       <option name="project" value="LOCAL" />
       <updated>1634759324395</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Complete server implementation">
+      <created>1636918491205</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1636918491205</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Complete server implementation">
+      <created>1636918501783</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1636918501783</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -180,6 +193,39 @@
     <MESSAGE value="[gRPC] Initial QuestionService implementation" />
     <MESSAGE value="[Socket][gRPC] Upgraded projects to .NET 6" />
     <MESSAGE value="Updated to top-level entrypoint" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated to top-level entrypoint" />
+    <MESSAGE value="Complete server implementation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Complete server implementation" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/TheSmartest.Server/JsonQuestionSource.cs</url>
+          <line>17</line>
+          <properties documentPath="D:\KPI\FourthCourse\7thSemester\DSC\TheSmartest\TheSmartest.Server\JsonQuestionSource.cs" initialLine="17" containingFunctionPresentation="method 'GetQuestions'">
+            <startOffsets>
+              <option value="359" />
+            </startOffsets>
+            <endOffsets>
+              <option value="400" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/TheSmartest.Client/GameService.cs</url>
+          <line>23</line>
+          <properties documentPath="D:\KPI\FourthCourse\7thSemester\DSC\TheSmartest\TheSmartest.Client\GameService.cs" initialLine="23" containingFunctionPresentation="method 'Start'">
+            <startOffsets>
+              <option value="516" />
+            </startOffsets>
+            <endOffsets>
+              <option value="555" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

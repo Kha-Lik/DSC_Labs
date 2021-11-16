@@ -13,4 +13,8 @@
       </PackageReference>
     </ItemGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\TheSmartest.ProtoContract\TheSmartest.ProtoContract.csproj" />
+    </ItemGroup>
+
 </Project>
