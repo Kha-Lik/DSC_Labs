@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Tariff Id="bcdefg">
+    <Name>SampleTariff</Name>
+    <OperatorName>SampleOperator</OperatorName>
+    <Payroll>-12</Payroll>
+    <CallPrices>
+        <CallPrice>
+            <CallPriceType>WithinTheNetwork</CallPriceType>
+            <PricePerMinute>0</PricePerMinute>
+        </CallPrice>
+        <CallPrice>
+            <CallPriceType>BeyondNetwork</CallPriceType>
+            <PricePerMinute>1</PricePerMinute>
+        </CallPrice>
+        <CallPrice>
+            <CallPriceType>ToLandline</CallPriceType>
+            <PricePerMinute>5</PricePerMinute>
+        </CallPrice>
+    </CallPrices>
+    <PricePerSms>0</PricePerSms>
+    <Parameters>
+    </Parameters>
+</Tariff>

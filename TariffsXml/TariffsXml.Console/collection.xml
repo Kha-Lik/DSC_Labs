@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Tariffs>
+    <Tariff Id="cdefgh">
+        <Name>ThirdSampleTariff</Name>
+        <OperatorName>ThirdSampleOperator</OperatorName>
+        <Payroll>240</Payroll>
+        <CallPrices>
+            <CallPrice>
+                <CallPriceType>WithinNetwork</CallPriceType>
+                <PricePerMinute>0</PricePerMinute>
+            </CallPrice>
+            <CallPrice>
+                <CallPriceType>BeyondNetwork</CallPriceType>
+                <PricePerMinute>0</PricePerMinute>
+            </CallPrice>
+            <CallPrice>
+                <CallPriceType>ToLandline</CallPriceType>
+                <PricePerMinute>1</PricePerMinute>
+            </CallPrice>
+        </CallPrices>
+        <PricePerSms>0</PricePerSms>
+        <Parameters>
+            <TariffParameter>
+                <HasFavouriteNumber>0</HasFavouriteNumber>
+                <BillingPlan>PerMinute</BillingPlan>
+                <ConnectionFee>40</ConnectionFee>
+            </TariffParameter>
+        </Parameters>
+    </Tariff>
+    <Tariff Id="abcdef">
+        <Name>SampleTariff</Name>
+        <OperatorName>SampleOperator</OperatorName>
+        <Payroll>120</Payroll>
+        <CallPrices>
+            <CallPrice>
+                <CallPriceType>WithinNetwork</CallPriceType>
+                <PricePerMinute>0</PricePerMinute>
+            </CallPrice>
+            <CallPrice>
+                <CallPriceType>BeyondNetwork</CallPriceType>
+                <PricePerMinute>1</PricePerMinute>
+            </CallPrice>
+            <CallPrice>
+                <CallPriceType>ToLandline</CallPriceType>
+                <PricePerMinute>5</PricePerMinute>
+            </CallPrice>
+        </CallPrices>
+        <PricePerSms>0</PricePerSms>
+        <Parameters>
+            <TariffParameter>
+                <HasFavouriteNumber>1234567</HasFavouriteNumber>
+                <BillingPlan>PerMinute</BillingPlan>
+                <ConnectionFee>0</ConnectionFee>
+            </TariffParameter>
+        </Parameters>
+    </Tariff>
+    <Tariff Id="bcdefg">
+        <Name>SecondSampleTariff</Name>
+        <OperatorName>SecondSampleOperator</OperatorName>
+        <Payroll>80</Payroll>
+        <CallPrices>
+            <CallPrice>
+                <CallPriceType>WithinNetwork</CallPriceType>
+                <PricePerMinute>0</PricePerMinute>
+            </CallPrice>
+            <CallPrice>
+                <CallPriceType>BeyondNetwork</CallPriceType>
+                <PricePerMinute>5</PricePerMinute>
+            </CallPrice>
+            <CallPrice>
+                <CallPriceType>ToLandline</CallPriceType>
+                <PricePerMinute>10</PricePerMinute>
+            </CallPrice>
+        </CallPrices>
+        <PricePerSms>5</PricePerSms>
+        <Parameters>
+            <TariffParameter>
+                <HasFavouriteNumber>10101010</HasFavouriteNumber>
+                <BillingPlan>Per12Seconds</BillingPlan>
+                <ConnectionFee>100</ConnectionFee>
+            </TariffParameter>
+        </Parameters>
+    </Tariff>
+</Tariffs>

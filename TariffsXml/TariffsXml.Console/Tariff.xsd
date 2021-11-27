@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<xs:schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified">
+  <xsd:element name="Tariff">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="Name" type="xs:string" />
+        <xsd:element name="OperatorName" type="xs:string" />
+        <xsd:element name="Payroll">
+          <xsd:simpleType>
+            <xsd:restriction base="xs:integer">
+              <xsd:minInclusive value="0" />
+            </xsd:restriction>
+          </xsd:simpleType>
+        </xsd:element>
+        <xsd:element name="CallPrices">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="CallPrice" minOccurs="1" maxOccurs="3">
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element name="CallPriceType">
+                      <xsd:simpleType>
+                        <xsd:restriction base="xs:string">
+                          <xsd:enumeration value="WithinNetwork" />
+                          <xsd:enumeration value="BeyondNetwork" />
+                          <xsd:enumeration value="ToLandline" />
+                        </xsd:restriction>
+                      </xsd:simpleType>
+                    </xsd:element>
+                    <xsd:element name="PricePerMinute">
+                      <xsd:simpleType>
+                        <xsd:restriction base="xs:integer">
+                          <xsd:minInclusive value="0" />
+                        </xsd:restriction>
+                      </xsd:simpleType>
+                    </xsd:element>
+                  </xsd:sequence>
+                </xsd:complexType>
+              </xsd:element>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element name="PricePerSms">
+          <xsd:simpleType>
+            <xs:restriction base="xs:integer">
+              <xsd:minInclusive value="0" />
+            </xs:restriction>
+          </xsd:simpleType>
+        </xsd:element>
+        <xsd:element name="Parameters">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="TariffParameter" minOccurs="1" maxOccurs="unbounded">
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element name="HasFavouriteNumber">
+                      <xsd:simpleType>
+                        <xsd:restriction base="xs:integer">
+                          <xsd:minInclusive value="0" />
+                        </xsd:restriction>
+                      </xsd:simpleType>
+                    </xsd:element>
+                    <xsd:element name="BillingPlan">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:enumeration value="Per12Seconds" />
+                          <xs:enumeration value="PerMinute" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xsd:element>
+                    <xsd:element name="ConnectionFee">
+                      <xsd:simpleType>
+                        <xsd:restriction base="xs:integer">
+                          <xsd:minInclusive value="0" />
+                        </xsd:restriction>
+                      </xsd:simpleType>
+                    </xsd:element>
+                  </xsd:sequence>
+                </xsd:complexType>
+              </xsd:element>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+      </xsd:sequence>
+      <xsd:attribute name="Id" type="xsd:ID" use="required" />
+    </xsd:complexType>
+  </xsd:element>
+</xs:schema>

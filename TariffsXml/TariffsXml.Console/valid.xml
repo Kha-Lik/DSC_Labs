@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Tariff Id="abcdef">
+    <Name>SampleTariff</Name>
+    <OperatorName>SampleOperator</OperatorName>
+    <Payroll>120</Payroll>
+    <CallPrices>
+        <CallPrice>
+            <CallPriceType>WithinNetwork</CallPriceType>
+            <PricePerMinute>0</PricePerMinute>
+        </CallPrice>
+        <CallPrice>
+            <CallPriceType>BeyondNetwork</CallPriceType>
+            <PricePerMinute>1</PricePerMinute>
+        </CallPrice>
+        <CallPrice>
+            <CallPriceType>ToLandline</CallPriceType>
+            <PricePerMinute>5</PricePerMinute>
+        </CallPrice>
+    </CallPrices>
+    <PricePerSms>0</PricePerSms>
+    <Parameters>
+        <TariffParameter>
+            <HasFavouriteNumber>1234567</HasFavouriteNumber>
+            <BillingPlan>PerMinute</BillingPlan>
+            <ConnectionFee>0</ConnectionFee>
+        </TariffParameter>
+    </Parameters>
+</Tariff>
