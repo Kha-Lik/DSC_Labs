@@ -1,0 +1,48 @@
+@page "/"
+@using TariffXml.Core
+@using RabbitMQ.Examples.Publisher.Models
+
+<PageTitle>Main</PageTitle>
+
+<h1>RabbitMQ Test App</h1>
+
+<EditForm Model="_model" OnValidSubmit="AddTariff">
+    <DataAnnotationsValidator/>
+    <ValidationSummary/>
+    
+    <p style="width: 20%">
+        <label style="display: flex; justify-content: space-between">
+            Tariff name:
+            <InputText id="tariff_name" @bind-Value="_model.Name"></InputText>
+        </label>
+    </p>
+    <p style="width: 20%">
+        <label style="display: flex; justify-content: space-between">
+            Operator name:
+            <InputText id="operator_name" @bind-Value="_model.OperatorName"></InputText>
+        </label>
+    </p>
+    <p style="width: 20%">
+        <label style="display: flex; justify-content: space-between">
+            Payroll:
+            <InputNumber style="align-content: end" id="payroll" @bind-Value="_model.Payroll"></InputNumber>
+        </label>
+    </p>
+    
+    <button type="submit">Submit</button>
+</EditForm>
+
+@code{
+    private TariffModel _model = new(){Id = Guid.NewGuid().ToString()};
+    
+    private void AddTariff()
+    {
+        Console.WriteLine("Btn clicked");
+    }
+
+    private bool Validate()
+    {
+        return true;
+    }
+
+}
