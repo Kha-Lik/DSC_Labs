@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MPI.MinMax.ConsoleApp", "MPI.MinMax.ConsoleApp\MPI.MinMax.ConsoleApp.csproj", "{850AB738-9397-4D1B-8378-47ABAB877EFB}"
 EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "MPI.MinMax.FSharp", "MPI.MinMax.FSharp\MPI.MinMax.FSharp.fsproj", "{38C46FF5-61B9-4DEB-BC87-2AC0CA89DB8B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{850AB738-9397-4D1B-8378-47ABAB877EFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{850AB738-9397-4D1B-8378-47ABAB877EFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{850AB738-9397-4D1B-8378-47ABAB877EFB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{38C46FF5-61B9-4DEB-BC87-2AC0CA89DB8B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38C46FF5-61B9-4DEB-BC87-2AC0CA89DB8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38C46FF5-61B9-4DEB-BC87-2AC0CA89DB8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38C46FF5-61B9-4DEB-BC87-2AC0CA89DB8B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
