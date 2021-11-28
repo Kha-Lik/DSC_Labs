@@ -1,6 +1,4 @@
-﻿// See https://aka.ms/new-console-template for more information
-
-var elementsPerProcessor = 500;
+﻿var elementsPerProcessor = 500;
 
 MPI.Environment.Run(ref args, comm =>
 {
@@ -18,15 +16,24 @@ MPI.Environment.Run(ref args, comm =>
         
         var subVector = comm.Scatter(vector, 0);
         var minValueSubVector = subVector.Min();
+        var maxValueSubVector = subVector.Max();
         Console.WriteLine($"Processor with rank {comm.Rank} counted min value {minValueSubVector}");
-        var minValues = comm.Gather(minValueSubVector, 0);
+        Console.WriteLine($"Processor with rank {comm.Rank} counted max value {maxValueSubVector}");
+        var minMaxTuple = new Tuple<int, int>(minValueSubVector, maxValueSubVector);
+        var minMaxValues = comm.Gather(minMaxTuple, 0);
+        var minValues = minMaxValues.Select(t => t.Item1);
+        var maxValues = minMaxValues.Select(t => t.Item2);
         Console.WriteLine($"Minimal value of vector is {minValues.Min()}");
+        Console.WriteLine($"Maximum value of vector is {maxValues.Max()}");
     }
     else
     {
         var subVector = comm.Scatter<int[]>(0);
         var minValueSubVector = subVector.Min();
+        var maxValueSubVector = subVector.Max();
         Console.WriteLine($"Processor with rank {comm.Rank} counted min value {minValueSubVector}");
-        comm.Gather(minValueSubVector, 0);
+        Console.WriteLine($"Processor with rank {comm.Rank} counted max value {maxValueSubVector}");
+        var minMaxTuple = new Tuple<int, int>(minValueSubVector, maxValueSubVector);
+        comm.Gather(minMaxTuple, 0);
     }
 });
