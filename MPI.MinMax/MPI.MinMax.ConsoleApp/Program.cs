@@ -20,7 +20,6 @@ MPI.Environment.Run(ref args, comm =>
         var minValueSubVector = subVector.Min();
         Console.WriteLine($"Processor with rank {comm.Rank} counted min value {minValueSubVector}");
         var minValues = comm.Gather(minValueSubVector, 0);
-        Console.WriteLine(minValues);
         Console.WriteLine($"Minimal value of vector is {minValues.Min()}");
     }
     else
