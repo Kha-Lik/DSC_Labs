@@ -37,25 +37,26 @@ public static class XmlHelper
                 Name = n.SelectSingleNode("Name")?.InnerText ?? "",
                 OperatorName = n.SelectSingleNode("OperatorName")?.InnerText ?? "",
                 Payroll = Convert.ToInt32(n.SelectSingleNode("Payroll")?.InnerText),
+                PricePerSms = Convert.ToInt32(n.SelectSingleNode("PricePerSms")?.InnerText)
             };
 
             var callPriceNodes = n.SelectNodes("//CallPrices/*")!;
             var parameterNodes = n.SelectNodes("//Parameters/*")!;
 
-            tariff.CallPrices = (callPriceNodes.Cast<XmlNode>()
+            tariff.CallPrices = callPriceNodes.Cast<XmlNode>()
                 .Select(callPriceNode => new CallPrice
                 {
                     CallPriceType = Enum.Parse<CallPriceType>(callPriceNode.SelectSingleNode("CallPriceType")?.InnerText ?? "Unknown"),
                     PricePerMinute = Convert.ToInt32(callPriceNode.SelectSingleNode("PricePerMinute")?.InnerText)
-                })).ToArray();
+                }).ToArray();
 
-            tariff.Parameters = (parameterNodes.Cast<XmlNode>()
+            tariff.Parameters = parameterNodes.Cast<XmlNode>()
                 .Select(parameterNode => new TariffParameter
                 {
                     HasFavouriteNumber = Convert.ToInt32(parameterNode.SelectSingleNode("HasFavouriteNumber")?.InnerText),
                     BillingPlan = Enum.Parse<BillingPlan>(parameterNode.SelectSingleNode("BillingPlan")?.InnerText ?? "Unknown"),
                     ConnectionFee = Convert.ToInt32(parameterNode.SelectSingleNode("ConnectionFee")?.InnerText)
-                })).ToArray();
+                }).ToArray();
 
             tariffs.Add(tariff);
         }
