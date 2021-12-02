@@ -9,11 +9,68 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c4f1f5ff-69b6-4c44-8ba0-ef8094e4b9cd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/TheSmartest.Client/ConsoleView.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TheSmartest.Client/GameService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TariffsXml/TariffXml.Core/bin/Debug/net6.0/TariffXml.Core.deps.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TariffsXml/TariffXml.Core/bin/Debug/net6.0/TariffXml.Core.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TariffsXml/TariffXml.Core/bin/Debug/net6.0/TariffXml.Core.pdb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TariffsXml/TariffXml.Core/bin/Debug/net6.0/ref/TariffXml.Core.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TariffsXml/TariffXml.Core/obj/Debug/net6.0/.NETCoreApp,Version=v6.0.AssemblyAttributes.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TariffsXml/TariffXml.Core/obj/Debug/net6.0/TariffXml.Core.AssemblyInfo.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TariffsXml/TariffXml.Core/obj/Debug/net6.0/TariffXml.Core.AssemblyInfoInputs.cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TariffsXml/TariffXml.Core/obj/Debug/net6.0/TariffXml.Core.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TariffsXml/TariffXml.Core/obj/Debug/net6.0/TariffXml.Core.GlobalUsings.g.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TariffsXml/TariffXml.Core/obj/Debug/net6.0/TariffXml.Core.assets.cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TariffsXml/TariffXml.Core/obj/Debug/net6.0/TariffXml.Core.csproj.AssemblyReference.cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TariffsXml/TariffXml.Core/obj/Debug/net6.0/TariffXml.Core.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TariffsXml/TariffXml.Core/obj/Debug/net6.0/TariffXml.Core.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TariffsXml/TariffXml.Core/obj/Debug/net6.0/TariffXml.Core.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TariffsXml/TariffXml.Core/obj/Debug/net6.0/TariffXml.Core.pdb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TariffsXml/TariffXml.Core/obj/Debug/net6.0/ref/TariffXml.Core.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TariffsXml/TariffXml.Core/obj/TariffXml.Core.csproj.nuget.dgspec.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TariffsXml/TariffXml.Core/obj/TariffXml.Core.csproj.nuget.g.props" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TariffsXml/TariffXml.Core/obj/TariffXml.Core.csproj.nuget.g.targets" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TariffsXml/TariffXml.Core/obj/project.assets.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TariffsXml/TariffXml.Core/obj/project.nuget.cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TariffsXml/TariffXml.Core/obj/project.packagespec.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TariffsXml/TariffXml.Core/obj/rider.project.restore.info" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TariffsXml/TariffsXml.Console/bin/Debug/net6.0/Newtonsoft.Json.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TariffsXml/TariffsXml.Console/bin/Debug/net6.0/Tariff.xsd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TariffsXml/TariffsXml.Console/bin/Debug/net6.0/TariffXml.Core.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TariffsXml/TariffsXml.Console/bin/Debug/net6.0/TariffXml.Core.pdb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TariffsXml/TariffsXml.Console/bin/Debug/net6.0/TariffsXml.Console.deps.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TariffsXml/TariffsXml.Console/bin/Debug/net6.0/TariffsXml.Console.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TariffsXml/TariffsXml.Console/bin/Debug/net6.0/TariffsXml.Console.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TariffsXml/TariffsXml.Console/bin/Debug/net6.0/TariffsXml.Console.pdb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TariffsXml/TariffsXml.Console/bin/Debug/net6.0/TariffsXml.Console.runtimeconfig.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TariffsXml/TariffsXml.Console/bin/Debug/net6.0/collection.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TariffsXml/TariffsXml.Console/bin/Debug/net6.0/invalid.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TariffsXml/TariffsXml.Console/bin/Debug/net6.0/ref/TariffsXml.Console.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TariffsXml/TariffsXml.Console/bin/Debug/net6.0/valid.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TariffsXml/TariffsXml.Console/obj/Debug/net6.0/.NETCoreApp,Version=v6.0.AssemblyAttributes.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TariffsXml/TariffsXml.Console/obj/Debug/net6.0/TariffsXml.Console.AssemblyInfo.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TariffsXml/TariffsXml.Console/obj/Debug/net6.0/TariffsXml.Console.AssemblyInfoInputs.cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TariffsXml/TariffsXml.Console/obj/Debug/net6.0/TariffsXml.Console.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TariffsXml/TariffsXml.Console/obj/Debug/net6.0/TariffsXml.Console.GlobalUsings.g.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TariffsXml/TariffsXml.Console/obj/Debug/net6.0/TariffsXml.Console.assets.cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TariffsXml/TariffsXml.Console/obj/Debug/net6.0/TariffsXml.Console.csproj.AssemblyReference.cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TariffsXml/TariffsXml.Console/obj/Debug/net6.0/TariffsXml.Console.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TariffsXml/TariffsXml.Console/obj/Debug/net6.0/TariffsXml.Console.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TariffsXml/TariffsXml.Console/obj/Debug/net6.0/TariffsXml.Console.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TariffsXml/TariffsXml.Console/obj/Debug/net6.0/TariffsXml.Console.genruntimeconfig.cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TariffsXml/TariffsXml.Console/obj/Debug/net6.0/TariffsXml.Console.pdb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TariffsXml/TariffsXml.Console/obj/Debug/net6.0/apphost.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TariffsXml/TariffsXml.Console/obj/Debug/net6.0/ref/TariffsXml.Console.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TariffsXml/TariffsXml.Console/obj/TariffsXml.Console.csproj.nuget.dgspec.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TariffsXml/TariffsXml.Console/obj/TariffsXml.Console.csproj.nuget.g.props" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TariffsXml/TariffsXml.Console/obj/TariffsXml.Console.csproj.nuget.g.targets" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TariffsXml/TariffsXml.Console/obj/project.assets.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TariffsXml/TariffsXml.Console/obj/project.nuget.cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TariffsXml/TariffsXml.Console/obj/project.packagespec.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TariffsXml/TariffsXml.Console/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TariffsXml/TariffsXml.Console/XmlHelper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../TariffsXml/TariffsXml.Console/XmlHelper.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TheSmartest/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TheSmartest/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TheSmartest.Client/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TheSmartest.Client/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TheSmartest.Client/TheSmartest.Client.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/TheSmartest.Client/TheSmartest.Client.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheSmartest.Client/ConsoleView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TheSmartest.Client/ConsoleView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheSmartest.Client/GameService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TheSmartest.Client/GameService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheSmartest.Server/GameServicesImplementation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TheSmartest.Server/GameServicesImplementation.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,15 +94,19 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/c61f8cd6ea9fa06bf3402d468e3f4ab7eece3c5347f51edc9a7c4861ae5a43/ServerCallContext.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/TheSmartest.ProtoContract/obj/Debug/net5.0/Thesmartest.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/TheSmartest.Server/IQuestionsSource.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/TheSmartest.Server/GameServicesImplementation.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/TheSmartest.Server/QuestionService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/1c8cf0f9b76e7c841a1356d9f114b342161e9225dd0aaf4b62f8bff5d0ab89/ConcurrentDictionary.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/TheSmartest.Server/Program.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/TheSmartest.Server/JsonQuestionSource.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/851f5c2009284d9db41dde16673c10bc62758/58/RepeatedField.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/c61f8cd6ea9fa06bf3402d468e3f4ab7eece3c5347f51edc9a7c4861ae5a43/ServerCallContext.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/3cc9ace215d69e35a62ffafec03a4e324025ccea3ce67df6b967548f1afe90/ServerCallHandler.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/TheSmartest.ProtoContract/obj/Debug/net5.0/Thesmartest.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/d5c2b46a84b01cb88975264f9c55a4fd872567989cc5e5654cd359fb93390a1/Server.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/TheSmartest.Server/IQuestionsSource.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/TheSmartest.Server/GameServicesImplementation.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/TheSmartest.Server/QuestionService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/TheSmartest.Client/Program.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/981d65c7fbe528a515db85bcbb92fe19ea3641e6ccd184df299fbba0eff72630/AnyAll.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -68,11 +129,10 @@
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="rider.run.widget.enabled.cache" value="true" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
-  <component name="RunManager" selected=".NET Project.TheSmartest">
+  <component name="RunManager" selected=".NET Project.TheSmartest.Server">
     <configuration name="TheSmartest" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
       <option name="PROGRAM_PARAMETERS" value="" />
@@ -126,7 +186,9 @@
       <workItem from="1633875963614" duration="2866000" />
       <workItem from="1634757135523" duration="3888000" />
       <workItem from="1635977841878" duration="152000" />
-      <workItem from="1636909613612" duration="21184000" />
+      <workItem from="1636909613612" duration="22038000" />
+      <workItem from="1637178641193" duration="2010000" />
+      <workItem from="1638479546936" duration="1522000" />
     </task>
     <task id="LOCAL-00001" summary="Defined proto scheme for the service">
       <created>1633818600442</created>
@@ -170,7 +232,14 @@
       <option name="project" value="LOCAL" />
       <updated>1636918501783</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Initial client implementation">
+      <created>1637103630878</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1637103630878</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -194,36 +263,50 @@
     <MESSAGE value="[Socket][gRPC] Upgraded projects to .NET 6" />
     <MESSAGE value="Updated to top-level entrypoint" />
     <MESSAGE value="Complete server implementation" />
-    <option name="LAST_COMMIT_MESSAGE" value="Complete server implementation" />
+    <MESSAGE value="Initial client implementation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Initial client implementation" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/TheSmartest.Server/JsonQuestionSource.cs</url>
-          <line>17</line>
-          <properties documentPath="D:\KPI\FourthCourse\7thSemester\DSC\TheSmartest\TheSmartest.Server\JsonQuestionSource.cs" initialLine="17" containingFunctionPresentation="method 'GetQuestions'">
+          <url>file://$PROJECT_DIR$/TheSmartest.Server/GameServicesImplementation.cs</url>
+          <line>111</line>
+          <properties documentPath="D:\KPI\FourthCourse\7thSemester\DSC\TheSmartest\TheSmartest.Server\GameServicesImplementation.cs" initialLine="109" containingFunctionPresentation="method 'SendAnswer'">
             <startOffsets>
-              <option value="359" />
+              <option value="4101" />
             </startOffsets>
             <endOffsets>
-              <option value="400" />
+              <option value="4186" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="1" />
+          <option name="timeStamp" value="12" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/TheSmartest.Client/GameService.cs</url>
-          <line>23</line>
-          <properties documentPath="D:\KPI\FourthCourse\7thSemester\DSC\TheSmartest\TheSmartest.Client\GameService.cs" initialLine="23" containingFunctionPresentation="method 'Start'">
+          <line>157</line>
+          <properties documentPath="D:\KPI\FourthCourse\7thSemester\DSC\TheSmartest\TheSmartest.Client\GameService.cs" initialLine="155" containingFunctionPresentation="method 'StartQuizCycle'">
             <startOffsets>
-              <option value="516" />
+              <option value="5013" />
             </startOffsets>
             <endOffsets>
-              <option value="555" />
+              <option value="5061" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="6" />
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/TheSmartest.Server/GameServicesImplementation.cs</url>
+          <line>95</line>
+          <properties documentPath="D:\KPI\FourthCourse\7thSemester\DSC\TheSmartest\TheSmartest.Server\GameServicesImplementation.cs" initialLine="94" containingFunctionPresentation="method 'GetQuestion'">
+            <startOffsets>
+              <option value="3469" />
+            </startOffsets>
+            <endOffsets>
+              <option value="3554" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="14" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -17,6 +17,7 @@ public static class ConsoleView
 
     public static void Redraw()
     {
+        Console.Clear();
         Console.WriteLine(BuildStatusBar());
         Console.WriteLine(MainScreen.ToString());
     }

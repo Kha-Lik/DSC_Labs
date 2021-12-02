@@ -21,7 +21,9 @@ public class GameService
     public async Task Start()
     {
         await Register();
+#pragma warning disable CS4014
         Task.Factory.StartNew(CheckGameStatus);
+#pragma warning restore CS4014
         await StartMainCycle();
     }
 
@@ -93,7 +95,7 @@ public class GameService
                     break;
                 case GameStatus.Finished:
                     await DrawFinishScreen();
-                    break;
+                    return;
             }
         }
     }
@@ -139,6 +141,7 @@ public class GameService
             if (_currentQuestionId == _status.TotalQuestions)
             {
                 ConsoleView.PrintLine("Waiting for others to finish");
+                await Task.Delay(500);
                 continue;
             }
                 
@@ -190,8 +193,9 @@ public class GameService
         {
             ConsoleView.AppendLine($"\t{player.Name} - {player.Score}");
         }
-
-        ConsoleView.Redraw();
+        
+        ConsoleView.PrintLine("Press any key to continue...");
+        Console.ReadKey();
     }
 
     private void CheckGameStatus()

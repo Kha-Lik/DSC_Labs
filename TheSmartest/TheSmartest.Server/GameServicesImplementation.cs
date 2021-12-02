@@ -2,6 +2,7 @@
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
+using Google.Protobuf.Collections;
 using Grpc.Core;
 
 namespace TheSmartest.Server
@@ -99,7 +100,8 @@ namespace TheSmartest.Server
             var response = new QuestionResponse
             {
                 Question = question.Text,
-                QuestionId = question.Id
+                QuestionId = question.Id,
+                Answers = {question.Answers}
             };
 
             return Task.FromResult(response);
@@ -111,6 +113,10 @@ namespace TheSmartest.Server
                 return Task.FromResult(new AnswerResponse());
 
             var result = _questionService.CheckAnswer(request.QuestionId, request.AnswerId);
+            if (result)
+                _players[request.PlayerId].Score++;
+            if (!_questionsCountByPlayer.ContainsKey(request.PlayerId))
+                _questionsCountByPlayer.TryAdd(request.PlayerId, 0);
             _questionsCountByPlayer[request.PlayerId]++;
 
             return Task.FromResult(new AnswerResponse { IsCorrect = result });
@@ -177,16 +183,18 @@ namespace TheSmartest.Server
                     : new UnregisterResponse {Result = true});
         }   
 
-        private async void CheckEndGameConditions()
+        private void CheckEndGameConditions()
         {
             while (true)
             {
-                await Task.Delay(50);
+                Thread.Sleep(50);
 
                 if (_gameStatus is not GameStatus.Started)
                     continue;
 
-                if (_questionsCountByPlayer.Any(kvp => kvp.Value != _questionService.GetQuestionsCount()))
+                if (_questionsCountByPlayer.Count is 0 
+                    || _players.Count != _questionsCountByPlayer.Count 
+                    ||_questionsCountByPlayer.Any(kvp => kvp.Value != _questionService.GetQuestionsCount()))
                     continue;
 
                 _gameStatus = GameStatus.Finished;
