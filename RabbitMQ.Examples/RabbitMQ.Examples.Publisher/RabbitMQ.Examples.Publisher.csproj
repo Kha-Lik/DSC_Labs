@@ -10,4 +10,13 @@
       <ProjectReference Include="..\RabbitMQ.Examples.Common\RabbitMQ.Examples.Common.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+      <PackageReference Include="RabbitMQ.Client" Version="6.2.2" />
+    </ItemGroup>
+    
+    <ItemGroup>
+        <None Update="Tariff.xsd" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest"/>
+    </ItemGroup>
+
 </Project>

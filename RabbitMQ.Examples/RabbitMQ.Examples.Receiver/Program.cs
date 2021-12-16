@@ -1,39 +1,39 @@
-﻿using Autofac.Extensions.DependencyInjection;
-using EventBus.Base.Standard.Configuration;
-using EventBus.RabbitMQ.Standard.Configuration;
-using EventBus.RabbitMQ.Standard.Options;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
+﻿using System.Text;
+using Microsoft.Data.SqlClient;
+using RabbitMQ.Client;
+using RabbitMQ.Client.Events;
 
-namespace RabbitMQ.Examples.Receiver
+var factory = new ConnectionFactory()
 {
-    internal static class Program
-    {
-        public static IConfiguration Configuration { get; set; }
-        
-        static void Main(string[] args)
-        {
-            Configuration = new ConfigurationBuilder().AddJsonFile($"appsettings.json", optional: false).Build();
+    Endpoint = new AmqpTcpEndpoint("localhost", 5672),
+    UserName = "user",
+    Password = "bitnami"
+};
 
-            var serviceCollection = new ServiceCollection();
-            ConfigureServices(serviceCollection);
-            
-            var serviceProviderFactory = new AutofacServiceProviderFactory();
-            var builder = serviceProviderFactory.CreateBuilder(serviceCollection);
-            var serviceProvider = serviceProviderFactory.CreateServiceProvider(builder);
-            Configure(serviceProvider);
-        }
-        private static void ConfigureServices(IServiceCollection services)
-        {
-            var rabbitMqOptions = Configuration.GetSection("RabbitMq").Get<RabbitMqOptions>();
+using var connection = factory.CreateConnection();
+using var channel = connection.CreateModel();
 
-            services.AddRabbitMqConnection(rabbitMqOptions);
-            services.AddRabbitMqRegistration(rabbitMqOptions);
-            services.AddEventBusHandling(EventBusExtension.GetHandlers());
-        }
-        private static void Configure(IServiceProvider serviceProvider)
-        {
-            serviceProvider.SubscribeToEvents();
-        }
-    }
+channel.QueueDeclare("tariffs-queue", true, false, false, null);
+
+var consumer = new EventingBasicConsumer(channel);
+consumer.Received += (sender, e) =>
+{
+    var body = e.Body.ToArray();
+    var message = Encoding.UTF8.GetString(body);
+    Console.WriteLine(message);
+    SendToDb(message);
+    Console.WriteLine("Send to db!");
+};
+
+channel.BasicConsume("tariffs-queue", true, consumer);
+Console.ReadLine();
+
+void SendToDb(string candy)
+{
+    const string connectionString = @"Server=localhost,51433;Database=TariffDb;User Id=sa;Password=yourStrong(!)Password;Trusted_Connection=false;TrustServerCertificate=True";
+    var cmdText = @$"INSERT INTO Tariff VALUES('{Guid.NewGuid()}', '{candy}');";
+    using var sqlConnection = new SqlConnection(connectionString);
+    var command = new SqlCommand(cmdText, sqlConnection);
+    command.Connection.Open();
+    command.ExecuteNonQuery();
 }

@@ -1,4 +1,4 @@
-﻿namespace TariffXml.Core;
+﻿namespace RabbitMQ.Examples.Common;
 
 public class Tariff
 {
