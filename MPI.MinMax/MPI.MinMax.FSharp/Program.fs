@@ -18,17 +18,17 @@ let main args =
         let minValueSubVector = subVector |> Array.min
         let maxValueSubVector = subVector |> Array.max
         let minMaxTuple = (minValueSubVector, maxValueSubVector)
-        printfn "Root found min value %d and max value %d" minValueSubVector maxValueSubVector
+        printfn $"Root found min value %d{minValueSubVector} and max value %d{maxValueSubVector}"
         let minMaxTuples = world.Gather(minMaxTuple, 0)
-        let minValue = minMaxTuples |> Seq.map (fun x -> fst(x)) |> Seq.min
-        let maxValue = minMaxTuples |> Seq.map (fun x -> snd(x)) |> Seq.max
-        printfn "Min and max values are %d and %d accordingly" minValue maxValue
+        let minValue = minMaxTuples |> Seq.map (fst) |> Seq.min
+        let maxValue = minMaxTuples |> Seq.map (snd) |> Seq.max
+        printfn $"Min and max values are %d{minValue} and %d{maxValue} accordingly"
     else
         let subVector = world.Scatter<int[]>(0)        
         let minValueSubVector = subVector |> Array.min
         let maxValueSubVector = subVector |> Array.max
         let minMaxTuple = (minValueSubVector, maxValueSubVector)
-        printfn "Process with rank %d found min value %d and max value %d" world.Rank minValueSubVector maxValueSubVector
+        printfn $"Process with rank %d{world.Rank} found min value %d{minValueSubVector} and max value %d{maxValueSubVector}"
         world.Gather(minMaxTuple, 0) |> ignore
 
     env.Dispose()

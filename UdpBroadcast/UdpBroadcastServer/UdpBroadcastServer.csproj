@@ -4,5 +4,9 @@
         <OutputType>Exe</OutputType>
         <TargetFramework>net6.0</TargetFramework>
     </PropertyGroup>
+    
+    <ItemGroup>
+        <None Update="clients.txt" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest"/>
+    </ItemGroup>
 
 </Project>
