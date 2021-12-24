@@ -5,21 +5,21 @@
 @using RabbitMQ.Examples.Publisher.Models
 @using System.Text
 
+@inject IToastService _toastService
+
 <PageTitle>Main</PageTitle>
 
 <h1>RabbitMQ Test App</h1>
 
 <InputFile OnChange="@LoadFiles"/>
 <p>
-    <label class="text-danger" id="error-label" @bind="_errorText"></label>
+    <button style="margin-top: 10px" class="btn-primary" @onclick="SubmitFile">Submit</button>
 </p>
-<button class="btn-primary" @onclick="SubmitFile">Submit</button>
 
 @code {
-    private IBrowserFile _file;
-    private string _errorText;
-    
-    private async void LoadFiles(InputFileChangeEventArgs e)
+    private IBrowserFile _file = null!;
+
+    private void LoadFiles(InputFileChangeEventArgs e)
     {
         _file = e.File;
     }
@@ -29,26 +29,29 @@
         var xmlString = await new StreamReader(_file.OpenReadStream()).ReadToEndAsync();
         var xmlDoc = new XmlDocument();
         xmlDoc.LoadXml(xmlString);
-        if (!XmlHelper.ValidateXml(xmlDoc))
+        if (!XmlHelper.ValidateXml(xmlDoc, out var errors))
         {
-            _errorText = "Invalid xml file";
+            _toastService.ShowError(string.Join("\n\n", errors), "Invalid xml file!");
             return;
         }
 
-        var tariffJson = XmlHelper.XmlToJson(xmlDoc);
+        var tariff = XmlHelper.ProcessXml(xmlDoc);
+        var tariffJson = JsonConvert.SerializeObject(tariff);
         PublishTariffToRabbitQueue(tariffJson);
+        _toastService.ShowSuccess("Successfully submitted tariff");
     }
-    
+
     private void PublishTariffToRabbitQueue(string tariffJson)
     {
-        var factory = new ConnectionFactory() { Endpoint = new AmqpTcpEndpoint("localhost", 5672), UserName = "user", Password = "bitnami"};
+        var factory = new ConnectionFactory() { Endpoint = new AmqpTcpEndpoint("localhost", 5672), UserName = "user", Password = "bitnami" };
         using var connection = factory.CreateConnection();
         using var channel = connection.CreateModel();
 
         channel.QueueDeclare("tariffs-queue", true, false, false, null);
 
         var body = Encoding.UTF8.GetBytes(tariffJson);
-        
+
         channel.BasicPublish(string.Empty, "tariffs-queue", null, body);
     }
+
 }

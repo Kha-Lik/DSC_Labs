@@ -11,12 +11,14 @@
     </ItemGroup>
 
     <ItemGroup>
+      <PackageReference Include="Blazored.Toast" Version="3.2.2" />
       <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
       <PackageReference Include="RabbitMQ.Client" Version="6.2.2" />
+      <PackageReference Include="Syncfusion.Blazor.Notifications" Version="19.4.0.38" />
     </ItemGroup>
     
     <ItemGroup>
-        <None Update="Tariff.xsd" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest"/>
+        <None Update="Tariff.xsd" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest" />
     </ItemGroup>
 
 </Project>

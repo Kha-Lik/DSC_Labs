@@ -28,10 +28,10 @@ consumer.Received += (sender, e) =>
 channel.BasicConsume("tariffs-queue", true, consumer);
 Console.ReadLine();
 
-void SendToDb(string candy)
+void SendToDb(string tariff)
 {
     const string connectionString = @"Server=localhost,51433;Database=TariffDb;User Id=sa;Password=yourStrong(!)Password;Trusted_Connection=false;TrustServerCertificate=True";
-    var cmdText = @$"INSERT INTO Tariff VALUES('{Guid.NewGuid()}', '{candy}');";
+    var cmdText = @$"INSERT INTO Tariff VALUES('{Guid.NewGuid()}', '{tariff}');";
     using var sqlConnection = new SqlConnection(connectionString);
     var command = new SqlCommand(cmdText, sqlConnection);
     command.Connection.Open();

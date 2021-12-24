@@ -12,66 +12,62 @@ public static class XmlHelper
         return JsonConvert.SerializeXmlNode(xml, Newtonsoft.Json.Formatting.Indented, false);
     }
 
-    public static Tariff[] ProcessXml(XmlDocument xml)
+    public static Tariff ProcessXml(XmlDocument xml)
     {
-        var tariffs = new List<Tariff>();
+        var xRoot = xml.DocumentElement!;
 
-        var xRoot = xml.DocumentElement;
 
-        var childNodes = xRoot!.SelectNodes("*")!;
-        foreach (XmlNode n in childNodes)
+        var tariff = new Tariff
         {
-            var tariff = new Tariff
+            Id = xRoot.SelectSingleNode("@Id")?.Value ?? "",
+            Name = xRoot.SelectSingleNode("Name")?.InnerText ?? "",
+            OperatorName = xRoot.SelectSingleNode("OperatorName")?.InnerText ?? "",
+            Payroll = Convert.ToInt32(xRoot.SelectSingleNode("Payroll")?.InnerText),
+            PricePerSms = Convert.ToInt32(xRoot.SelectSingleNode("PricePerSms")?.InnerText)
+        };
+
+        var callPriceNodes = xRoot.SelectNodes("//CallPrices/*")!;
+        var parameterNodes = xRoot.SelectNodes("//Parameters/*")!;
+
+        tariff.CallPrices = callPriceNodes.Cast<XmlNode>()
+            .Select(callPriceNode => new CallPrice
             {
-                Id = n.SelectSingleNode("@Id")?.Value ?? "",
-                Name = n.SelectSingleNode("Name")?.InnerText ?? "",
-                OperatorName = n.SelectSingleNode("OperatorName")?.InnerText ?? "",
-                Payroll = Convert.ToInt32(n.SelectSingleNode("Payroll")?.InnerText),
-                PricePerSms = Convert.ToInt32(n.SelectSingleNode("PricePerSms")?.InnerText)
-            };
+                CallPriceType =
+                    Enum.Parse<CallPriceType>(callPriceNode.SelectSingleNode("CallPriceType")?.InnerText ?? "Unknown"),
+                PricePerMinute = Convert.ToInt32(callPriceNode.SelectSingleNode("PricePerMinute")?.InnerText)
+            }).ToArray();
 
-            var callPriceNodes = n.SelectNodes("//CallPrices/*")!;
-            var parameterNodes = n.SelectNodes("//Parameters/*")!;
+        tariff.Parameters = parameterNodes.Cast<XmlNode>()
+            .Select(parameterNode => new TariffParameter
+            {
+                HasFavouriteNumber = Convert.ToInt32(parameterNode.SelectSingleNode("HasFavouriteNumber")?.InnerText),
+                BillingPlan =
+                    Enum.Parse<BillingPlan>(parameterNode.SelectSingleNode("BillingPlan")?.InnerText ?? "Unknown"),
+                ConnectionFee = Convert.ToInt32(parameterNode.SelectSingleNode("ConnectionFee")?.InnerText)
+            }).ToArray();
 
-            tariff.CallPrices = callPriceNodes.Cast<XmlNode>()
-                .Select(callPriceNode => new CallPrice
-                {
-                    CallPriceType = Enum.Parse<CallPriceType>(callPriceNode.SelectSingleNode("CallPriceType")?.InnerText ?? "Unknown"),
-                    PricePerMinute = Convert.ToInt32(callPriceNode.SelectSingleNode("PricePerMinute")?.InnerText)
-                }).ToArray();
-
-            tariff.Parameters = parameterNodes.Cast<XmlNode>()
-                .Select(parameterNode => new TariffParameter
-                {
-                    HasFavouriteNumber = Convert.ToInt32(parameterNode.SelectSingleNode("HasFavouriteNumber")?.InnerText),
-                    BillingPlan = Enum.Parse<BillingPlan>(parameterNode.SelectSingleNode("BillingPlan")?.InnerText ?? "Unknown"),
-                    ConnectionFee = Convert.ToInt32(parameterNode.SelectSingleNode("ConnectionFee")?.InnerText)
-                }).ToArray();
-
-            tariffs.Add(tariff);
-        }
-
-        tariffs.Sort(new TariffComparer());
-
-        return tariffs.ToArray();
+        return tariff;
     }
 
-    public static bool ValidateXml(XmlDocument xml)
+    public static bool ValidateXml(XmlDocument xml, out IEnumerable<string> errors)
     {
         var schema = new XmlSchemaSet();
         schema.Add("", "Tariff.xsd");
 
-        var errors = false;
+        var hasErrors = false;
+        var errorsList = new LinkedList<string>();
         xml.Schemas.Add(schema);
         xml.Validate((o, e) =>
         {
-            if (e.Severity != XmlSeverityType.Error) 
+            if (e.Severity != XmlSeverityType.Error)
                 return;
-            
-            errors = true;
+
+            hasErrors = true;
+            errorsList.AddLast(e.Message);
             Console.WriteLine(e.Message);
         });
 
-        return !errors;
+        errors = errorsList;
+        return !hasErrors;
     }
 }
